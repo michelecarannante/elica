@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scilla Cariddi Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('https://www.scillacariddirentalboat.it/wp-content/uploads/2024/11/elica.png') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+    }
+    div {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      white-space: nowrap;
+    }
+    span {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 48px; /* Dimensione del testo */
+      color: #000; /* Colore nero */
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Ombra chiara per ulteriore contrasto */
+    }
+  </style>
+</head>
+<body>
+  <script>
+    b = document.body;
+    a = Object.assign;
+    a(b.style, { color: '#fff' });
+    w = 'scilla cariddi rental boat.zone scilla cariddi rental boat.zone '.toUpperCase().split``;
+    F = (n, O = 0, C, S, o, t) => {
+      b.innerHTML += `<div id=${n} style='position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);text-align:center;white-space:nowrap'></div>`;
+      w.map(l => this[n].innerHTML += `<span style='display:inline-block;margin-right:5px;font-size:48px;color:#000;text-shadow:2px 2px 4px rgba(255,255,255,0.7)'>${l}</span>`); // Colore nero e ombra chiara
+      t = O;
+      setInterval(_ => {
+        t += .005;
+        [...this[n].children].map((e, i) => {
+          T = t + i / 2.7;
+          a(e.style, {
+            translate: `0 ${Math.sin(T) * 50}px`, // Mantiene l'animazione centrata
+            scale: Math.cos(T) * .5 + .5
+          });
+        }, 16);
+      });
+    };
+    F('Z');
+    F('X', 3);
+  </script>
+</body>
+</html>
